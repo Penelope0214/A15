@@ -51,6 +51,7 @@ header img {
 .shadow {
 	text-shadow: 2px 2px 2px #800000;
 }
+
 /* the styles for the main content(homepage) */
 main {
 	clear: left;
@@ -79,6 +80,7 @@ main h1 {
 	box-shadow: 5px 5px;
 	padding: .5em 0 .5em 2em;
 	background-color: white;
+	
 }
 main h2 {
 	color: #800000;
@@ -127,8 +129,34 @@ aside h3 {
 	font-size: 105%;
 	padding-bottom:.25em
 }
-	
-	
+/*article*/	
+article {
+	border-top-width: 2px;
+	border-top-style: solid;
+	border-top-color: #800000;
+	border-bottom-width: 2px;
+	border-bottom-style:solid;
+	border-bottom-color:#80000
+}
+	article h1{
+		font-size:150;
+		padding-bottom: .5em;
+		padding-top: .25ems;
+		margins: 0;
+article img{
+	float: right;
+	margin-top: 1px;
+	margin-bottom:1px;
+	margin-left:
+		
+	article h2{
+		padding-top: 0;
+	}
+	article h3{
+		font-size:105%
+		padding-bottom: .25;
+	}
+
 /* the styles for the footer */
 footer {
 	background-color: #931420;
@@ -152,6 +180,9 @@ main{
 
 main h1{
 	font-size: 150%;
+	top-padding: .5;
+	bottom-padding:.25;
+	margins: 0;
 }
 
 main h2{
