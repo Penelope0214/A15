@@ -138,22 +138,23 @@ article {
 	border-bottom-style:solid;
 	border-bottom-color:#80000
 }
-	article h1{
+article h1{
 		font-size:150;
 		padding-bottom: .5em;
 		padding-top: .25ems;
-		margins: 0;
+		margin: 0 0 0 0;
 article img{
 	float: right;
-	margin-top: 1px;
-	margin-bottom:1px;
-	margin-left:
+	margin-left: .5em .5em .5em .5em;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
 		
 	article h2{
 		padding-top: 0;
 	}
 	article h3{
-		font-size:105%
+		font-size:105%;
 		padding-bottom: .25;
 	}
 
