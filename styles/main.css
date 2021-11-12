@@ -1,81 +1,196 @@
-<!DOCTYPE html>
-<html lang="en">
+* {
+	margin: 0;
+	padding: 0;
+  }
 
-<head>
-	<meta charset="utf-8">
-	<title>San Joaquin Valley Town Hall</title>
-	<link rel="shortcut icon" href="images/favicon.ico">
-	<link rel="stylesheet" href="styles/main.css">
-</head>
+  /* the styles for the elements */
+  body {
+	  font-family: Arial, Helvetica, sans-serif;
+	  font-size: 100%;
+	  width: 800px;
+	  margin-top: 0;
+	  margin-bottom: 0;
+	  margin-left: auto;
+	  margin-right: auto;
+	  border-style:solid;
+	  border-width: 3px;
+	  border-color: #931420;
+	  background-color: #fffded;
+  }
+  
+#nav_menu, #nav_menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+}
+#nav_menu li {
+    float: left;
+}
+#nav_menu li a {
+    display: inline-block;
+    width: 160px;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background-color: #800000;
+}
+#nav_menu .current {
+    color: yellow;
+}
+#nav_menu li ul{
+    display: none;
+    top: 100%;
+    visibility: hidden;
+}
 
-<body>
-	<header>
-		<img src="images/town_hall_logo.gif" alt="Town Hall logo" height=80px>
-		<h2>San Joaquin Valley Town Hall</h2>
-        	<h3>Celebrating our <em class="shadow">75<sup>th</sup></em> Year</h3>
-	</header>
-	
-	<ul id="nav_menu">
-	    <li><a href="index.html" class="current">Home</a></li>
-	    <li><a href="index.html">Speakers</a></li>
-	    <li><a href="index.html">Luncheons</a></li>
-	    <li><a href="index.html">Tickets</a></li>
-	    <li><a href="index.html">About us</a>
-	    <ul>
-	        <li><a>Our History</a></li>
-	        <li><a>Board of Directors</a></li>
-	        <li><a>Past Speakers</a></li>
-	        <li><a>Contact Information</a></li>
-	    </ul></li>
-	</ul>
-	
-	<main>
-    	<section>
-	    <h2>Our Mission</h2>
-		<p>San Joaquin Valley Town Hall is a non-profit organization that is run by an all-volunteer board of directors. Our mission is to bring nationally and internationally renowned, thought-provoking speakers who inform, educa
-		te, and entertain our audience! As one or our members told us:</p>
-		<br>
-		<blockquote>&quot;Each year I give a ticket package to each of our family members. I think of it as the gift of knowledge...and that is priceless.&quot;</blockquote>
-		<br> <br>
-		<h1>Speaker of the Month</h1>
-		<br>
-			<article>
-				<h2>Fossil Threads in the Web of Life</h2>
-				<img src="images/sampson_dinosaur.jpg">
-				
-				<h3>February <br> Scott Sampson</h3>
-				
-				<p> What's 75 million years old and brand spanking new? A teenage Utahceratops! Come to the Saroyan, armed with your best dinosaur roar, when Scott Sampson, Research Curator at the Utah Museum of Natural History, steps to the podium. Sampson's research has focused on the ecology and evolution of late Cretaceous dinosaurs and he has conducted fieldwork in a number of <br> countries in Africa.
-				<br> <br>
-				<a href="speakers/sampson.html">Read more.</a>&nbsp;<b><a href=media/sampson.swf target="_blank"> Or play video </a></b></p>
-				<br> 
-			</article>
-		<h2>Our Ticket Packages</h2>
-			<ul>
-			    <li>Season Package: $95</li>
-			    <li>Patron Package: $200</li>
-			    <li>Single Speaker: $25</li>
-			</ul>
-        </section>
-        <aside>
-        	<h2>Guest speakers</h2>
-        	<h2>October <br> <a href="speakers/toobin.html">Jeffrey Toobin</a></h2>
-        	<img src="images/toobin75.jpg" alt="picture of Jeffrey Toobin">
-        
-		<h2>November <br> <a href="speakers/sorkin.html">Andrew Ross Sorkin</a></h2>
-       		<img src="images/sorkin75.jpg" alt="picture of Andrew Ross Sorkin">
-        
-		<h2>January <br> <a href="speakers/chua.html">Amy Chua</a></h2>
-        	<img src="images/chua75.jpg" alt="picture of Amy Chua">
-		
-        	<h2>February <br> <a href="speakers/sampson.html">Scott Sampson</a></h2>
-        	<img src="images/sampson75.jpg" alt="picture of Scott Sampson">
-	</aside>
-	
-	</main>
-	<footer>
-		<p>&copy; 2018, San Joaquin Valley Town Hall, Fresno, CA 93755</p>
-		<p>&copy; 2021, Penelope Martinez</p>
-	</footer>
-</body>
-</html>
+#nav_menu li ul li {
+    float: none;
+}
+#nav_menu li:hover > ul, ul li ul:hover {
+    visibility: visible;
+    display: block;
+    position: absolute;
+}
+
+#nav_menu::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+  /* the styles for the header */
+  
+  header {
+	  border-bottom-style: solid;
+	  border-bottom-width: 3px;
+	  border-bottom-color: #931420;
+	  padding-top: 1.5em;
+	  padding-bottom: 2em;
+	  background-image:linear-gradient(30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%)
+  }
+  header img {
+	  float: left;
+	  padding-left: 30px;
+	  padding-right: 30px;
+  }
+  
+  header h2 {
+	  font-size: 170%;
+	  color: black;
+  }
+  
+  header h3 {
+	  font-size: 130%;
+	  font-style: italic;
+  }
+  
+  .shadow {
+	  text-shadow: 1px 1px #800000;
+  }
+  
+  /* the styles for the section */
+  
+  section {
+	  width: 525px;
+	  float: right;
+	  padding-left: 20px;
+	  padding-right: 20px;
+	  padding-bottom: 20px;
+  }
+  section p {
+	  padding-bottom: .5em;
+  }
+  section blockquote {
+	  padding-right: 2em;
+	  padding-left: 2em;
+	  font-style: italic;
+  }
+  section ul {
+	  padding-bottom: .25em;
+	  padding-left: 1.25em;
+  }
+  section li {
+	  padding-bottom: .35em;
+  }
+  section h2, aside h2 {
+	  font-size: 130%;
+	  color: #800000;
+	  padding-top: .5em;
+	  padding-bottom: .25em;
+  }
+  
+  /* styles for aside */
+  
+  aside {
+	  width: 215px;
+	  float: right;
+	  padding-left: 20px;
+	  padding-bottom: 20px;
+	  clear: left;
+  }
+  aside img {
+	  padding-bottom: 1em;
+  }
+  aside h3 {
+	  font-size: 105%;
+	  padding-bottom: .25em;
+  }
+  
+  /* styles for article */
+  
+  article h1 {
+	  font-size: 150%;
+	  padding-bottom: .25em;
+	  margin: 0 0 0 0;
+  }
+  article {
+	  padding-top: .5em;
+	  padding-bottom: .5em;
+	  border-top-width: 2px;
+	  border-top-style: solid;
+	  border-top-color: #800000;
+	  border-bottom-width: 2px;
+	  border-bottom-style: solid;
+	  border-bottom-color: #800000;
+  }
+  article img {
+	  float: right;
+	  border-style: solid;
+	  border-width: 1px;
+	  border-color: black;
+	  margin: .5em .5em .5em .5em;
+  }
+  article h2 {
+	  padding-top: 0;
+  }
+  article h3 {
+	  font-size: 105%;
+	  padding-bottom: .25em;
+  }
+  /* styles for links */
+  
+  a:focus {
+	  font-style: italic;
+  }
+  a:hover {
+	  font-style: italic;
+  }
+  
+  /* the styles for the footer */
+  
+  footer {
+	  background-color: #931420;
+	  clear: both;
+  }
+  
+  footer p {
+	  text-align: center;
+	  color: white;
+	  padding-top: 1em;
+	  padding-bottom: 1em;
+  }
+  
