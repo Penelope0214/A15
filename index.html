@@ -1,46 +1,114 @@
 <!DOCTYPE html>
-<html>
-<head>
-<script>
-function setCookie(cname,cvalue,exdays) {
-  const d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  let expires = "expires=" + d.toGMTString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
+<html lang= "en">
 
-function getCookie(cname) {
-  let name = cname + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  for(let i = 0; i < ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
-
-function checkCookie() {
-  let user = getCookie("username");
-  if (user != "") {
-    alert("Welcome again " + user);
-  } else {
-     user = prompt("Please enter your name:","");
-     if (user != "" && user != null) {
-       setCookie("username", user, 30);
-     }
-  }
-}
-</script>
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>San Joaquin Valley Town Hall</title>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/c9_main.css">
+    <link rel="stylesheet" href="styles/slicknav.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+    	$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+    	});
+    </script>
 </head>
-
-<body onload="checkCookie()"></body>
-
+ 
+  <header>
+		<img src="images/town_hall_logo.gif" alt="Town Hall logo" height="80">
+		<h2>San Joaquin Valley Town Hall</h2>
+		<h3>Celebrating our <span class="shadow">75<sup>th</sup></span> Year</h3>
+	</header>
+ 
+  
+  <nav id="mobile_menu"><div class="slicknav_menu"><a href="#" aria-haspopup="true" tabindex="0" class="slicknav_btn"><span class="slicknav_menutxt">MENU</span><span class="slicknav_icon"><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></a><nav class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;">
+    	<ul>
+        	<li><a href="index.html" class="current" role="menuitem">Home</a></li>
+        	<li><a href="speakers.html" role="menuitem">Speakers</a></li>
+        	<li><a href="luncheons.html" role="menuitem">Luncheons</a></li>
+        	<li><a href="tickets.html" role="menuitem">Tickets</a></li>
+        	<li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabindex="-1" class="slicknav_item"><a href="aboutus.html">About Us</a>
+            	<span class="slicknav_arrow">►</span></a><ul role="menu" class="slicknav_hidden" aria-hidden="true" style="display: none;">
+                	<li><a href="#" role="menuitem" tabindex="-1">Our History</a></li>
+                	<li><a href="#" role="menuitem" tabindex="-1">Board of Directors</a></li>
+                	<li><a href="#" role="menuitem" tabindex="-1">Past Speakers</a></li>
+                	<li><a href="#" role="menuitem" tabindex="-1">Contact Information</a></li>
+            	</ul>
+        	</li>
+    	</ul>
+	</nav></div></nav>
+  
+ 
+  <nav id="nav_menu">       	
+  <ul>
+        	<li><a href="index.html" class="current">Home</a></li>
+        	<li><a href="speakers.html">Speakers</a></li>
+        	<li><a href="luncheons.html">Luncheons</a></li>
+        	<li><a href="tickets.html">Tickets</a></li>
+        	<li><a href="aboutus.html">About Us</a>
+            	<ul>
+                	<li><a href="#">Our History</a></li>
+                	<li><a href="#">Board of Directors</a></li>
+                	<li><a href="#">Past Speakers</a></li>
+                	<li><a href="#">Contact Information</a></li>
+            	</ul>
+        	</li>
+    	</ul>
+  </nav>
+  
+ <main>
+		<section>
+			<h2>Our Mission</h2>
+			<p>San Joaquin Valley Town Hall is a non-profit organization that is run by an 
+			   all-volunteer board of directors. Our mission is to bring nationally and 
+			   internationally renowned, thought-provoking speakers who inform, educate, 
+			   and entertain our audience! As one or our members told us:</p>
+			<blockquote>“Each year I give a ticket package to each of our family members. 
+			I think of it as the gift of knowledge...and that is priceless.”</blockquote>
+			
+			<h1>Speaker of the Month</h1>
+			<article>
+				<h2>Fossil Threads in the Web of Life</h2>
+				<img src="images/sampson_dinosaur.jpg" alt="Scott Sampson with dinosaur">
+				<h3>February<br>
+				Scott Sampson</h3>
+				<p>What's 75 million years old and brand spanking new? A teenage Utahceratops! 
+				Come to the Saroyan, armed with your best dinosaur roar, when Scott Sampson, Research 
+				Curator at the Utah Museum of Natural History, steps to the podium. Sampson's research 
+				has focused on the ecology and evolution of late Cretaceous dinosaurs and he has conducted 
+				fieldwork in a number of countries in Africa.</p>
+				<p>
+					<a href="speakers/sampson.html">Read more.</a>&nbsp;
+					<a href="media/sampson.swf" target="_blank">Or play video.</a>
+				</p>
+			</article>
+			
+			<h2>Our Ticket Packages</h2>
+			<ul>
+				<li>Season Package: $95</li>
+				<li>Patron Package: $200</li>
+				<li>Single Speaker: $25</li>
+			</ul>
+		</section>
+		<aside>
+			<h2>Guest speakers</h2>
+			<div id="speakers">
+			<h3>October<br><a href="speakers/toobin.html">Jeffrey Toobin</a></h3>
+			<img src="images/toobin75.jpg" alt="Jeffrey Toobin photo">
+			<h3>November<br><a href="speakers/sorkin.html">Andrew Ross Sorkin</a></h3>
+			<img src="images/sorkin75.jpg" alt="Andrew Ross Sorkin photo">
+			<h3>January<br><a href="speakers/chua.html">Amy Chua</a></h3>
+			<img src="images/chua75.jpg" alt="Amy Chua photo">
+			<h3>February<br><a href="speakers/sampson.html">Scott Sampson</a></h3>
+			<img src="images/sampson75.jpg" alt="Scott Sampson photo">
+			</div>
+		</aside>
+	</main>
+ 
 <footer>
     <p>&copy; November 12, 2021, Penelope Martinez </p>
 </footer>
